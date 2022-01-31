@@ -13,11 +13,11 @@ router.post("/envia-correo", async(req, res) => {
 
 
     const OAuth2_client = new OAuth2(
-        config.clientId || process.env.clientId,
-        config.clientSecret || process.env.clientSecret,
-        config.uriEmail || process.env.uriEmail
-    )
-    OAuth2_client.setCredentials({ refresh_token: (config.refreshToken || process.env.refreshToken) })
+        (process.env.clientId || config.clientId),
+        (process.env.clientSecret || config.clie0ntSecret),
+        (process.env.uriEmail || config.uriEmail)
+    );
+    OAuth2_client.setCredentials({ refresh_token: (process.env.refreshToken || config.refreshToken) })
 
 
     if (usuario) {
@@ -45,15 +45,15 @@ router.post("/envia-correo", async(req, res) => {
                     service: "gmail",
                     auth: {
                         type: "OAuth2",
-                        user: config.userEmail || process.env.userEmail,
-                        clientId: config.clientId || process.env.clientId,
-                        clientSecret: config.clientSecret || process.env.clientSecret,
-                        refreshToken: config.refreshToken || process.env.refreshToken,
-                        accessToken: accessToken || process.env.accessToken
+                        user: (process.env.userEmail || config.userEmail),
+                        clientId: (process.env.clientId || config.clientId),
+                        clientSecret: (process.env.clientSecret || config.clientSecret),
+                        refreshToken: (process.env.refreshToken || config.refreshToken),
+                        accessToken: accessToken
                     },
                 });
                 const mail_options = {
-                    from: `API Articulos <${(config.userEmail || process.env.userEmail)}>`,
+                    from: `API Articulos <${(process.env.userEmail || config.userEmail)}>`,
                     to: usuario.correo,
                     subject: 'Recuperacion de Cuenta ',
                     html: contentHTML
@@ -76,7 +76,6 @@ router.post("/envia-correo", async(req, res) => {
         sendMail()
             .then((result) => res.status(200).send("enviado"))
             .catch((error) => console.log(error.message))
-            // res.send("Enviado")
             */
 })
 
