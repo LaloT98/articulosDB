@@ -1,0 +1,43 @@
+<div class="col-md-8 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Nuevo Artículo</h3>
+        </div>
+        <div class="card-body">
+            <form action="/articulos/articulo-nuevo" method="POST" enctype="multipart/form-data">
+                {{!--------tipo---------}}
+                <div class="form-group">
+                    <select class="custom-select" name="tipo" id="validationDefault" required>
+                        <option selected disabled>Tipo de Artículo o Poster</option>
+                        <option>JCR</option>
+                        <option>SCIMAGO</option>
+                        <option>Indice</option>
+                        <option>Scopus</option>
+                        <option>Conacyt</option>
+                    </select>
+                </div>
+                {{!--------nombre---------}}
+                <div class="form-group">
+                    <input type="text" name="nombreA" class="form-control" placeholder="Nombre del articulo" required>
+                </div>
+                {{!--------autor---------}}
+                <div class="form-group">
+                    <input type="text" name="autor" class="form-control" placeholder="Autores" required>
+                </div>
+                {{!--------url---------}}
+                <div class="form-group">
+                    <input type="text" name="url" class="form-control" placeholder="URL del artículo" required>
+                </div>
+                {{!--------subir---------}}
+                <div class="form-group">
+                    <input type="file" name="pdf" class="form-control" placeholder="Subir el articulo en PDF">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-info btn-block" type="submit">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

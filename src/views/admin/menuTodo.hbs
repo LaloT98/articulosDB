@@ -1,0 +1,187 @@
+<div class="card">
+    <div class="card-header text-center">
+        <h2>Administradores</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-dark table-info">
+            <thead>
+                <tr>
+                    <th scope="col">Matrícula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">CURP</th>
+                    <th scope="col">RFC</th>
+                    <th scope="col">Direccion</th>
+                    <th scope="col">Nacimiento</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Edad</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light" id="letraTabla">
+                {{#each TodosAdministradores}}
+                <tr>
+                    <th scope="row">{{matricula}}</th>
+                    <td>{{nombre}}</td>
+                    <td>{{apellidos}}</td>
+                    <td>{{CURP}}</td>
+                    <td>{{RFC}}</td>
+                    <td>{{direccion}}</td>
+                    <td>{{lugarNacimiento}}</td>
+                    <td>{{telefono}}</td>
+                    <td>{{edad}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <table class="table table-dark table-info">
+            <thead>
+                <tr>
+                    <th scope="col">Matrícula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">CVU</th>
+                    <th scope="col">Ingeniería</th>
+                    <th scope="col">Maestria</th>
+                    <th scope="col">Doctorado</th>
+                    <th scope="col">Especialidad</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light" id="letraTabla">
+                {{#each TodosAdministradores}}
+                <tr>
+                    <th scope="row">{{matricula}}</th>
+                    <td>{{nombre}}</td>
+                    <td>{{CVU}}</td>
+                    <td>{{licenciatura}}</td>
+                    <td>{{maestria}}</td>
+                    <td>{{doctorado}}</td>
+                    <td>{{especialidad}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="card">
+    <div class="card-header text-center">
+        <h2>Usuarios</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-dark table-info">
+            <thead>
+                <tr>
+                    <th scope="col">Matrícula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">CURP</th>
+                    <th scope="col">RFC</th>
+                    <th scope="col">Direccion</th>
+                    <th scope="col">Nacimiento</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Edad</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light" id="letraTabla">
+                {{#each TodosUsuarios}}
+                <tr>
+                    <th scope="row">{{matricula}}</th>
+                    <td>{{nombre}}</td>
+                    <td>{{apellidos}}</td>
+                    <td>{{CURP}}</td>
+                    <td>{{RFC}}</td>
+                    <td>{{direccion}}</td>
+                    <td>{{lugarNacimiento}}</td>
+                    <td>{{telefono}}</td>
+                    <td>{{edad}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <table class="table table-dark table-info">
+            <thead>
+                <tr>
+                    <th scope="col">Matrícula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">CVU</th>
+                    <th scope="col">Ingeniería</th>
+                    <th scope="col">Maestria</th>
+                    <th scope="col">Doctorado</th>
+                    <th scope="col">Especialidad</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light" id="letraTabla">
+                {{#each TodosUsuarios}}
+                <tr>
+                    <th scope="row">{{matricula}}</th>
+                    <td>{{nombre}}</td>
+                    <td>{{CVU}}</td>
+                    <td>{{licenciatura}}</td>
+                    <td>{{maestria}}</td>
+                    <td>{{doctorado}}</td>
+                    <td>{{especialidad}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header text-center">
+        <h2>Datos De los Articulos</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-dark table-info text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Matrícula</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Autores</th>
+                    <th scope="col">URL</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light" id="letraTabla">
+                {{#each TodosArticulos}}
+                <tr>
+                    <th scope="row">{{matricula}}</th>
+                    <td>{{tipo}}</td>
+                    <td>{{nombreA}}</td>
+                    <td>{{autor}}</td>
+                    <td>{{url}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <table class="table table-dark table-info text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Matrícula</th>
+                    <th scope="col">Nombre Original</th>
+                    <th scope="col">Filename</th>
+                    <th scope="col">Tipo de archivo</th>
+                    <th scope="col">Tamaño</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light" id="letraTabla">
+                {{#each TodosArticulos}}
+                <tr>
+                    <th scope="row">{{matricula}}</th>
+                    <td>{{originalname}}</td>
+                    <td>{{filename}}</td>
+                    <td>{{mimetype}}</td>
+                    <td>{{size}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

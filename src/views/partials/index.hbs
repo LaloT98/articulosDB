@@ -1,0 +1,181 @@
+<section id="hero">
+    <duv class="container">
+        <div class="content-center">
+            <div id="espacio">
+
+            </div>
+            <h1 class="mt-5">Articulos</h1>
+            <h4>Api REST-FUL</h4>
+            <a href="#ingreso" class="btn btn-secondary mt-4">Ingresar<img src="assets/images/arrow-right.svg"
+                    class="ml-2"></a>
+        </div>
+    </duv>
+</section>
+
+<section id="portfolio">
+    <div class="container-fluid">
+        <div class="content-center">
+            <h2>Las siguientes <b>revistas</b> son con las que se trabaja</h2>
+            <p>En esta paguina web se pueden guardar articulos de las siguientes revistas, CONACYT, JCR, SCIMAGO,
+                SCOPUS</p>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-6">
+                <div class="portfolio-container">
+                    <div class="portfolio-details">
+                        <a href="#ingreso">
+                            <h2>CONACYT</h2>
+                        </a>
+                    </div>
+                    <img src="assets/images/Conacyt.png" class="img-fluid" alt="Portfolio 01">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="portfolio-container">
+                    <div class="portfolio-details">
+                        <a href="#ingreso">
+                            <h2>JCR</h2>
+                        </a>
+                    </div>
+                    <img src="assets/images/JCR.jpg" class="img-fluid" alt="Portfolio 02">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="portfolio-container">
+                    <div class="portfolio-details">
+                        <a href="#ingreso">
+                            <h2>SCIMAGO</h2>
+                        </a>
+                    </div>
+                    <img src="assets/images/SCIMAGO.png" class="img-fluid" alt="Portfolio 03">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="portfolio-container">
+                    <div class="portfolio-details">
+                        <a href="#ingreso">
+                            <h2>ACOPUS</h2>
+                        </a>
+                    </div>
+                    <img src="assets/images/Scopus.jpg" class="img-fluid" alt="Portfolio 04">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="ingreso">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-4">
+                <h3>Estas list@ para <b>ingresar</b> a la plataforma</h3>
+                <p>Solo es necesario el ingreso de tu matricula como usuario y tu contraseña
+                </p>
+            </div>
+            <div class="col-md-6 mt-4">
+                <div class="row">
+                    <form action="/users/ingresar" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="matricula" placeholder="matricula" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Ingresar
+                            </button>
+                        </div>
+                    </form>
+                    <div class="form-group">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="equipo" class="bgLightGrey">
+    <div class="container">
+        <div class="content-center">
+            <h2>Acerca de <b>mi</b></h2>
+            <p>Hola, me llamo Eduardo </p>
+            <p>Actualmente estudio la Maestria en Sistemas Computacionales en el Instituto Tecnologico Superior de
+                Misantla, Soy recien Graduado de la Ingeneria En Mecatronica en la Universidad Tecnologica del
+                Centro de Veracruz</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 content-center">
+                <div class="member-container">
+                    <div class="member-details">
+                        <h5>Eduardo T. Garcia</h5>
+                        <span>Desarrollador</span>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/"><img class="img-fluid">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/LaloT098"><img class="img-fluid">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/eduardo.tzitzihuagarcia.16"><img class="img-fluid">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/eduardo-tzitzihua-garc%C3%ADa-789935216/"><img
+                                        class="img-fluid">
+                                    <ion-icon name="logo-linkedin"> </ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="assets/images/mi-foto.jpg" class="img-fluid" alt="member 2">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Recuperacion de Contraseña</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/envia-correo" method="post">
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="correo" placeholder="Correo del Usuario" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="CURP"
+                                    placeholder="Ingrese la CURP del Usuario" required>
+                            </div>
+                            <div>
+                                <button class="btn btn-success btn-block">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>

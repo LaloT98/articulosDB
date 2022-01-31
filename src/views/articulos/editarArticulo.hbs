@@ -1,0 +1,72 @@
+<div class="col-md-8 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title d-flex justify-content-between align-items-center">
+                Editar Articulo <a href="/pdf/{{articulo._id}}/delete"><i class="fas fa-trash-alt" style='color:red'></i></a>
+            </h4>
+        </div>
+        
+
+        <div class="card-body">
+            <form action="/articulo/edit-article/{{articulo._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            Tipo de artículo
+                        </div>
+                    </div>
+                    <input type="text" name="tipo" class="form-control" placeholder="tipo" value="{{articulo.tipo}}"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            nombre del artículo
+                        </div>
+                    </div>
+                    <input type="text" name="nombreA" class="form-control" placeholder="nombreA"
+                        value="{{articulo.nombreA}}" required>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            Autores
+                        </div>
+                    </div>
+                    <input type="text" name="autor" class="form-control" placeholder="autor" value="{{articulo.autor}}"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            URL
+                        </div>
+                    </div>
+                    <input type="text" name="url" class="form-control" placeholder="url" value="{{articulo.url}}"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            Cambiar PDF
+                        </div>
+                        <a href="/pdf/{{articulo._id}}/editPDF"><i
+                                class="fas fa-edit d-flex justify-content-between align-items-center"></i></a>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-success btn-block" type="submit">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+<div class="col-md-8 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Vista completa del artículo</h3>
+
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div>
+                    Visualizador de PDF
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <object class="pdfview editPDF" type="{{articulo.mimetype}}"
+                                data="{{articulo.path}}"></object>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    TIPO DE REVISTA
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="tipo" class="form-control" placeholder="magazine"
+                                value="{{articulo.tipo}}">
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    TITULO DEL ARTICULO
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <textarea type="text" name="nombreA" class="form-control">{{articulo.nombreA}}</textarea>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    AUTORES
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="autor" class="form-control" placeholder="Author"
+                                value="{{articulo.autor}}">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    URL
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="url" class="form-control" placeholder="url"
+                                value="{{articulo.url}}">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    Filename
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="filename" class="form-control" value="{{articulo.filename}}">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    Path
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="path" class="form-control" value="{{articulo.path}}">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    originalname
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="originalname" class="form-control"
+                                value="{{articulo.originalname}}">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    mimetype
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="mimetype" class="form-control" value="{{articulo.mimetype}}">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    size
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="size" class="form-control" value="{{articulo.size}}">
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    user
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="user" class="form-control" value="{{articulo.user}}">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    SUBIDO
+                    <fieldset disabled>
+                        <div class="form-group">
+                            <input type="text" name="user" class="form-control" value="{{fecha}}">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <a href="/menu" class="btn btn-primary  btn-block btn-lg"> Regresar </a>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+</div>

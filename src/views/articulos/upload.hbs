@@ -1,0 +1,23 @@
+<div class="col-md-8 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <form action="/pdf/{{articulo._id}}/editPDF" method="POST" enctype="multipart/form-data">
+                <div class="card">
+                    <div class="form-group">
+                        <h4 class="card-title d-flex justify-content-between align-items-center">
+                            Cambio de PDF
+                            <input value="Guardar" type="submit" class="fas fa-file-pdf" style='color:rgb(0, 17, 255)'>
+                        </h4>
+                        <input type="file" name="pdf" class="form-control">
+                    </div>
+                </div>
+            </form>
+
+            <div class="form-group">
+            </div>
+            <div class="form-group">
+                <a href="/pdf/{{articulo._id}}/edit" class="btn btn-warning  btn-block"> Atras </a>
+            </div>
+        </div>
+    </div>
+</div>

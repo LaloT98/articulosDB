@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">
+                    MENU
+                </h2>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="form-group">
+                        <h4>Hola {{usuario.nombre}}</h4>
+                        ¡Vamos con todo el dia de hoy!
+                    </div>
+                    
+                    <div class="form-group">
+                        <a href="/upload" class="btn btn-primary btn-block">Nuevo articulo</a>
+                    </div>
+                    <div class="form-group">
+                        <a href="/informacion" class="btn btn-primary btn-block">Visualizar mi Informacion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{#each articulos}}
+    <div class="col-md-4">
+        <div class="card animate__animated animate__fadeInLeft">
+            <object class="pdfview card-img-top" type="{{mimetype}}" data="{{path}}"></object>
+            <div class="card-body">
+                <p>
+                    {{originalname}}
+                </p>
+                <div class="form-group">
+                    <a href="/pdf/{{_id}}" class="btn btn-info"> Visualizar información </a>
+                    {{!-- <a href="/notes/edit/{{_id}}"><i class="fas fa-edit"></i></a>  --}}
+                </div>
+                <div class="card-group">
+                    <a href="/pdf/{{_id}}/edit" class="btn btn-outline-warning btn-lg"> Editar Articulo </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+</div>

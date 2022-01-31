@@ -1,0 +1,144 @@
+<div class="row">
+  <div class="col-md-9 mx-auto text-center">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="h4">
+          Registro de Cuenta
+        </h1>
+      </div>
+      <img class=" mx-auto d-block logo2 m-4" src="/img/logo2.png" alt="Logo">
+      <div class="card-body">
+        <form action="/users/registrar" method="POST">
+
+          <div class="form-group Espacio">
+            <h3>Obligatorios</h3>
+          </div>
+          {{!--------Tipo de Usuario---------}}
+          <div class="form-group">
+            <select class="custom-select" name="tipo" id="validationDefault" value="{{tipo}}" required autofocus>
+              <option selected disabled>Tipo de Usuario</option>
+              <option>USUARIO</option>
+              <option>ADMINISTRADOR</option>
+            </select>
+          </div>
+          {{!--------nombre---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="nombre" placeholder="Nombre Completo"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{nombre}}" required>
+          </div>
+          {{!--------apellidos---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="apellidos" placeholder="Apellidos"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{apellidos}}" required>
+          </div>
+          {{!--------correo---------}}
+          <div class="form-group">
+            <input type="email" class="form-control" name="correo" placeholder="Correo" value="{{correo}}" required>
+          </div>
+
+          {{!--------matricula---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="matricula" placeholder="Matricula"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{matricula}}" required>
+          </div>
+          {{!--------Contrasena---------}}
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Contraseña" value="{{password}}"
+              required>
+          </div>
+          {{!--------Confirmar Contrasena---------}}
+          <div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirmar contraseña"
+              value="{{confirm_password}}" required>
+          </div>
+          {{!--------licenciatura--------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="licenciatura" placeholder="licenciatura"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{licenciatura}}" required>
+          </div>
+          {{!--------CURP---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="CURP" placeholder="CURP"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{CURP}}" required>
+          </div>
+
+
+
+
+          <div class="form-group Espacio">
+            <h3>Opcionales</h3>
+          </div>
+          
+          {{!--------CVU---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="CVU" placeholder="CVU"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{CVU}}">
+          </div>
+          {{!--------RFC---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="RFC" placeholder="RFC"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{RFC}}">
+          </div>
+
+          {{!--------direccion---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="direccion" placeholder="Direccion"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{direccion}}">
+          </div>
+          {{!--------telefono--------}}
+          <div class="form-group">
+            <input type="number" class="form-control" name="telefono" placeholder="Telefono" min="0000000000"
+              max="9999999999" value="{{telefono}}">
+          </div>
+          {{!--------lugarNacimiento--------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="lugarNacimiento"
+              placeholder="Lugar Nacimiento" onKeyUp="javascript:this.value=this.value.toUpperCase()"
+              value="{{lugarNacimiento}}">
+          </div>
+          {{!--------edad--------}}
+          <div class="form-group">
+            <input type="number" class="form-control" name="edad" placeholder="Edad"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{edad}}">
+          </div>
+
+
+          {{!--------maestria--------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="maestria" placeholder="maestria"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{maestria}}">
+          </div>
+          {{!--------doctorado--------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="doctorado" placeholder="doctorado"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{doctorado}}">
+          </div>
+          {{!--------especialidad--------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="especialidad" placeholder="especialidad"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{especialidad}}">
+          </div>
+
+
+
+          {{!-- Validacion de los datos --}}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+            <label class="form-check-label" for="invalidCheck3">
+              Aceptas registrar nuevo usuario
+            </label>
+          </div>
+
+
+          <button class="btn btn-primary btn-block">
+            Registrar
+          </button>
+        </form>
+        {{!-- <form>
+          <h6>¿Ya estas registrado?</h6>
+          <a href="/users/ingresar" class="btn btn-primary btn-sm">Ingresar</a>
+        </form> --}}
+      </div>
+    </div>
+  </div>
+</div>

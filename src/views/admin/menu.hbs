@@ -1,0 +1,164 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">
+                    MENU
+                </h2>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group text-center">
+                        <h4>Hola {{usuario.nombre}}</h4>
+                        ¡Vamos con todo el dia de hoy!
+                    </div>
+                    <div class="jumbotron">
+                        <a href="/menu/reporte/administradores"
+                            class="btn btn-dark btn-lg btn-block">Administradores</a>
+                        <p class="lead">Administradores Registrados</p>
+                        <hr class="my-4">
+
+                        <a href="/menu/reporte/usuarios" class="btn btn-dark btn-lg btn-block">Usuarios</a>
+                        <p class="lead">Usuarios Registrados</p>
+                        <hr class="my-4">
+
+                        <a href="/menu/reporte/articulos" class="btn btn-dark btn-lg btn-block">Articulos</a>
+                        <p class="lead">Articulos Registrados</p>
+                        <hr class="my-4">
+
+                        <a href="/menu/reporte/todo" class="btn btn-dark btn-lg btn-block">Reporte Completo</a>
+                        <p class="lead">Visualizar los Administradores, Usuarios y los Articulos registrados</p>
+                        <hr class="my-4">
+
+                        <a href="/menu/registrar" class="btn btn-dark btn-lg btn-block">Registrar</a>
+                        <p class="lead">Registrar un nuevo Usuario o administrador</p>
+                        <hr class="my-4">
+                        <a href="/informacion" class="btn btn-dark btn-lg btn-block">Mi Informacion</a>
+                        <p class="lead">Visualizar Solo mi Informacion personal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">
+                    Mis datos
+                </h2>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <div>
+                        Nombre Completo
+
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control"
+                                    value="{{usuario.nombre}} {{usuario.apellidos}}">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div>
+                        Matricula
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.matricula}}">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div>
+                        Contraseña
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.password}}">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div>
+                        CURP
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.CURP}}">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div>
+                        RFC
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.RFC}}">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div>
+                        Numero de contacto
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.telefono}}">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div>
+                        CVU
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.CVU}}">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div>
+                        Licenciatura
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.licenciatura}}">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div>
+                        Maestria
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.maestria}}">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div>
+                        Doctorado
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.doctorado}}">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div>
+                        Especialidad
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="{{usuario.especialidad}}">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div>
+                        Dia de registro
+                        <fieldset disabled>
+                            <div class="form-group">
+                                <input type="text" name="user" class="form-control" value="{{fecha}}">
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
