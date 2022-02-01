@@ -14,7 +14,7 @@ router.post("/envia-correo", async(req, res) => {
 
     const OAuth2_client = new OAuth2(
         (process.env.clientId || config.clientId),
-        (process.env.clientSecret || config.clie0ntSecret),
+        (process.env.clientSecret || config.clientSecret),
         (process.env.uriEmail || config.uriEmail)
     );
     OAuth2_client.setCredentials({ refresh_token: (process.env.refreshToken || config.refreshToken) })
@@ -25,17 +25,20 @@ router.post("/envia-correo", async(req, res) => {
     <h2> Hola ${usuario.nombre} </h2>
     <h3> Te enviamos la informacion solicitada para el ingresar a tu cuenta</h3>
     
+    <h4> matricula      : ${usuario.matricula} </h4>
+    <h4> Contraseña     : ${usuario.password}</h4>
+    <h4> Tipo de Usuaio : ${usuario.tipo} </h4>
+    
+    
+    
 
-    <ul>
-        <li> matricula      : ${usuario.matricula} </li>
-        <li> Contraseña     : ${usuario.password} </li>
-        <li> Tipo de Usuaio : ${usuario.tipo} </li>
-    </ul>
+    <h5>Estamos trabajando para mejorar la plataforma web, por tu comprension gracias </h5>
 
-    <h4> si deseas cambiar la contraseña, deberas ingresar con tu cuenta y cambiar dentro de la plataforma </h4>
+
+    <h5> si deseas cambiar la contraseña, deberas ingresar con tu cuenta y cambiar dentro de la plataforma </h5>
     https://app-articulosdb.herokuapp.com
 
-    <h4>Estamos trabajando para mejorar la plataforma web, por tu comprension gracias </h4>
+    
 
     `;
         async function sendMail() {
@@ -72,11 +75,6 @@ router.post("/envia-correo", async(req, res) => {
         res.render("users/email")
 
     }
-    /*
-        sendMail()
-            .then((result) => res.status(200).send("enviado"))
-            .catch((error) => console.log(error.message))
-            */
 })
 
 module.exports = router

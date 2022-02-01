@@ -65,79 +65,46 @@ router.post('/users/registrar', async(req, res, next) => {
         res.redirect('/');
     }
 });
+router.get('/informacion', isAuthenticated, async(req, res) => {
+    const usuario = await User.findById(req.user.id).lean()
+    res.render('articulos/informacionUsuario', { usuario });
+});
+
+///RENOMBRAR DATOS DEL USUARIO
+router.put("/informacion/editar", isAuthenticated, async(req, res) => {
+    const { CVU, maestria, doctorado, especialidad, RFC, telefono } = req.body;
+    console.log(req.body)
+    await User.findByIdAndUpdate(req.user.id, { CVU, maestria, doctorado, especialidad, RFC, telefono });
+    res.redirect('/informacion');
+})
 
 
 
+router.get('/informacion/password', isAuthenticated, async(req, res) => {
+    const usuario = await User.findById(req.user.id).lean()
+    res.render('admin/password', { usuario });
+});
 
 
-/*
-router.post("/envia-correo", async(req, res) => {
-    const { correo, nombre, matricula } = req.body
+///RENOMBRAR CONTRASEÑA DEL USUARIO
+router.put("/informacion/password", isAuthenticated, async(req, res) => {
+    const errors = [];
+    const { password, ConfirmPassword } = req.body;
+    console.log(req.body)
+    if (password != ConfirmPassword) {
+        errors.push({ text: "La contraseña no es igual" });
+    };
+    if (password.length < 6) {
+        errors.push({ text: "colocar una contraseña mayor a 6 digitos" });
+    };
+    if (errors.length > 0) {
+        res.render("admin/password", { errors })
+    } else {
+        await User.findByIdAndUpdate(req.user.id, { password });
+        req.flash('sucess_msg', 'Se cambio la contraseña de forma exitosa');
+        res.redirect('/informacion');
+    }
 
-    contentHTML = `
-        <h1>  Informacion del usuario </h1>
-        <ul>
-            <li>  Matricula: ${matricula} </li>
-            <li>  Correo: ${correo} </li>
-            <li>  Nombre: ${nombre} </li>
-        </ul>
-        `;
-    console.log(contentHTML)
-    const transporter = nodemailer.createTransport({
-        host: "gmail.com",
-        port: 26,
-        secure: false, // true for 465, false for other ports
-        auth: {
-            user: "eduardotzitzihuagarcia65@gmail.com", // generated ethereal user
-            pass: "un18nacioLALO14629*", // generate
-        },
-        tls: {
-            rejectUnauthorized: false
-        }
-    });
-
-    const info = await transporter.sendMail({
-        from: "'API Articulos' <eduardotzitzihuagarcia65@gmail.com>",
-        to: "eduardotzitzihuagarcia65@gmail.com",
-        subject: "pruba de contenido",
-        html: contentHTML
-
-    });
-    console.log("mensaje enviado", info.messageId);
-
-
-    res.redirect("/");
-
-})*/
-
-
-////////////////////recuperacion de contraseña
-// router.put("/cambioContrasena", async(req, rep) => {
-//     const { username } = req.body;
-//     if (!(username)) {
-//         return res.status(400).json({ message: 'usuario requerido' });
-//     }
-
-//     const message = "Se te envio un correo con un link para el reseteo de tu contraseña";
-//     let verificationLink = `http://localhost:5000/newpassword/${token}`;
-//     let emailStatus = 'OK';
-//     const user
-
-
-//     let info = await transporter.sendMail({
-//         from: '"API articulos 👻" <api.articulos@noresponder.com>', // sender address
-//         to: user.username,
-//         subject: "REcuperacion de contraseña", // Subject line
-//         html: `
-//         <b>dar click en el enlace </b>
-//         <a href = "${verificationLink}"> ${verificationLink} </a>
-//         `,
-
-//     });
-
-
-// });
-
-
+})
 
 module.exports = router;

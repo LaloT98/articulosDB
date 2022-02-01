@@ -18,10 +18,7 @@ router.get("/menu", isAuthenticated, async(req, res) => {
     }
 });
 
-router.get('/informacion', isAuthenticated, async(req, res) => {
-    const usuario = await User.findById(req.user.id).lean()
-    res.render('articulos/informacionUsuario', { usuario });
-});
+
 
 router.get('/menu/reporte/administradores', isAuthenticated, async(req, res) => {
     const usuario = await User.findById(req.user.id).lean()
